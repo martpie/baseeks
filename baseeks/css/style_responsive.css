@@ -1,0 +1,55 @@
+/* Responsive Design for less than 960px */
+
+
+
+/* ------------------------------------
+ * ----- BASICS -----------------------
+ * ----------------------------------*/
+
+.mobile_only{
+    display: none;
+}
+
+.desktop_only{
+    display: block;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BASICS RESPONSIVE ------------
+ * ----------------------------------*/
+
+@media screen and (max-width: 960px){
+    
+    .mobile_only{
+        display: block;
+    }
+
+    .desktop_only{
+        display: none;
+    }
+}
+
+
+
+
+/* ------------------------------------
+ * ----- RESPONSIVE FOR TABLETS -------
+ * ----------------------------------*/
+
+@media screen and (max-width: 960px and min-width: 768px){
+
+}
+
+
+
+
+/* ------------------------------------
+ * ----- RESPONSIVE FOR SMARTPHONES ---
+ * ----------------------------------*/
+
+@media screen and (max-width: 960px and min-width: 768px){
+
+}

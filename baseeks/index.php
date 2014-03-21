@@ -1,0 +1,30 @@
+<?php
+/**
+ * Main template File
+ *
+ * By Astate
+ * http://astate.ch
+ *
+ */
+ 
+ 
+/* ------------------------------------
+ * ----- VARIABLES --------------------
+ * ----------------------------------*/
+    
+    $template_name = basename(get_page_template());
+
+    get_header();
+    
+?>
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+<?php
+    
+    get_footer();
