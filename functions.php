@@ -1,6 +1,17 @@
 <?php
 
 /* ------------------------------------
+ * ----- OPTIONS ----------------------
+ * ----------------------------------*/
+ 
+     $activate_jquery = true;
+     $activate_jquery_ui = false;
+     $activate_jquery_mobile = false;
+ 
+ 
+ 
+ 
+/* ------------------------------------
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
 
@@ -38,10 +49,22 @@
 
     function add_scripts(){
 
-        wp_deregister_script('jquery'); 
-        wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '1.10.2', true);
-
-        wp_enqueue_script('jquery');
+        /* using google hosted JS scripts for better performance, you can find more infos there: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
+        if($activate_jquery){        
+            wp_deregister_script('jquery'); 
+            wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"), false, '1.11.0', true);
+            wp_enqueue_script('jquery');
+        }
+        
+        if($activate_jquery_mobile){       
+            wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
+            wp_enqueue_script('jquery_ui');
+        }
+        
+        if($activate_jquery_mobile){  
+            wp_register_script('jquery_mobile', ("https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
+            wp_enqueue_script('jquery_mobile');
+        }
 
         /* You can add you own scripts here */
     }
