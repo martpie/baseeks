@@ -3,7 +3,7 @@ Baseeks
 
 #### Description
 
-Baseeks is a really basic theme for WordPress. That simply means **it won't display a single stuff** on your screen, but it is a base for all themes you want to build yourself with **your own templates**.
+Baseeks is a really basic theme for WordPress. That simply means **it won't display any stuff** on your screen, but it is a base for all themes you want to build yourself with **your own templates**.
 
 ---
 
