@@ -5,10 +5,10 @@
 
 
 
+
 /* ------------------------------------
  * ----- BASICS NORMALIZE -------------
  * ----------------------------------*/
-
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
@@ -24,6 +24,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     line-height: 1.4;
 }
 
+html{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 html, body{
     height: 100%;
 }
@@ -32,6 +37,34 @@ input, textarea:focus{
     outline: none;
 }
 
+a{
+    background: transparent;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+img{
+    border: 0;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th{
+    padding: 0;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- CUSTOM FOR BASEEKS -----------
+ * ----------------------------------*/
+
 .no_select{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -39,8 +72,4 @@ input, textarea:focus{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-img{
-    border: 0;
 }

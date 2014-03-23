@@ -19,6 +19,7 @@ Incoming.
 ###### 23/03/2014
 
 * Various cleanup with useless #id and .class
+* Various improvements in CSS normalizer
 
 ###### 22/03/2014
 
