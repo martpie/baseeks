@@ -17,6 +17,13 @@
 
     add_theme_support( 'menus' ); // Menus
 
+    
+    
+    
+/* ------------------------------------
+ * ----- GENERAL SUPPORTS & HOOKS -----
+ * ----------------------------------*/
+    
     add_action('wp_enqueue_scripts', 'add_styles'); // Style
     add_action('wp_enqueue_scripts', 'add_scripts'); // Scripts
 

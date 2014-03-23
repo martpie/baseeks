@@ -7,23 +7,18 @@
  *
  */
  
- 
-/* ------------------------------------
- * ----- VARIABLES --------------------
- * ----------------------------------*/
-    
-    $template_name = basename(get_page_template());
+/*
+    This is the main template file, usually it is not used, people usually create a template for each page theey have
+*/
+
 
     get_header();
     
 ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+    <!-- You can start here. Well, I guess. -->
+    
 
 <?php
     

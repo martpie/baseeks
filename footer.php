@@ -6,13 +6,13 @@
  *
  */
 ?>
-                </div><!-- #main-content -->
+                </div><!-- #main_content -->
             </div><!-- #main -->           
 
 
-            <footer id="colophon" class="site-footer desktop_only" role="contentinfo">
-
-            </footer><!-- #colophon -->
+            <footer>
+            
+            </footer>
             
         </div><!-- #page -->
 

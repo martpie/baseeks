@@ -22,20 +22,18 @@
         <![endif]-->
 
         <?php
+            /* please notice that jQuery is called by wp_footer(), jQuery won't work here */
             wp_head();
         ?>
     </head>
 
     <body <?php body_class(); ?>>
-    <div id="page" class="hfeed site">
-        <header id="masthead" class="site-header" role="banner">
-            <div class="header-main">	
-                <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                    <?php wp_nav_menu(array('menu' => 'primary_left', 'menu_class' => 'menu_primary_left')); ?>
+    <div id="page">
+        <header>
+                <nav id="primary-navigation">
+                    <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
                 </nav>
-            </div>
-        </header><!-- #masthead -->
+        </header>
 
-        <div id="main" class="site-main">     
-            <!-- main-content -->
-            <div id="main-content" class="main-content">
+        <div id="main">     
+            <div id="main_content">

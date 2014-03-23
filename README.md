@@ -16,6 +16,10 @@ Incoming.
 
 #### Changelog
 
+###### 23/03/2014
+
+* Various cleanup with useless #id and .class
+
 ###### 22/03/2014
 
 * Using google hosted html5shyv for better performance
