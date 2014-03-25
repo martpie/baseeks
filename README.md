@@ -16,6 +16,10 @@ Incoming.
 
 #### Changelog
 
+###### 25/03/2014
+
+* Various security enhancements
+
 ###### 23/03/2014
 
 * Various cleanup with useless #id and .class

@@ -15,13 +15,14 @@
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
 
-    add_theme_support( 'menus' ); // Menus
+    add_theme_support('menus'); // Menus
 
+    remove_action('wp_head', 'wp_generator'); // Security: hide WordPress version
     
     
     
 /* ------------------------------------
- * ----- GENERAL SUPPORTS & HOOKS -----
+ * ----- HHOOKS -----------------------
  * ----------------------------------*/
     
     add_action('wp_enqueue_scripts', 'add_styles'); // Style
@@ -63,7 +64,7 @@
             wp_enqueue_script('jquery');
         }
         
-        if($activate_jquery_mobile){       
+        if($activate_jquery_ui){       
             wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
             wp_enqueue_script('jquery_ui');
         }
