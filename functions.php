@@ -4,13 +4,17 @@
  * ----- OPTIONS ----------------------
  * ----------------------------------*/
  
+     // Debug
+     $activate_debugger = 'all'; // 'all'/'dafault'/'none'
+     
+     // jQuery
      $activate_jquery = true;
      $activate_jquery_ui = false;
      $activate_jquery_mobile = false;
- 
- 
- 
- 
+     
+     
+     
+     
 /* ------------------------------------
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
@@ -64,7 +68,7 @@
             wp_enqueue_script('jquery');
         }
         
-        if($activate_jquery_ui){       
+        if($activate_jquery_ui){   
             wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
             wp_enqueue_script('jquery_ui');
         }
@@ -76,5 +80,25 @@
 
         /* You can add you own scripts here */
     }
+    
+    
+    
+    
+/* ------------------------------------
+ * ----- DEBUGGER ---------------------
+ * ----------------------------------*/
 
+    if($activate_debugger == 'all'){
+        // Enable 
+        error_reporting(E_ALL);
+    }
+    elseif($activate_debugger == 'default'){
+        // Default PHP configuration
+        error_reporting(E_ALL ^ E_NOTICE);
+    }
+    elseif($activate_debugger == 'none'){
+        // Disable debugger, no error will be displayed
+        error_reporting(E_ALL);
+    }
+    
 ?>

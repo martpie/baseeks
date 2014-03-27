@@ -1,3 +1,10 @@
+<?php
+
+    /* PLEASE INCLUDE YOUR SCRIPTS AND STYLES WITH /functions.php */
+
+?>
+
+
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>

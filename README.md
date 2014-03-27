@@ -16,6 +16,10 @@ Incoming.
 
 #### Changelog
 
+###### 27/03/2014
+
+* Debugger toggle in functions.php
+
 ###### 25/03/2014
 
 * Various security enhancements
