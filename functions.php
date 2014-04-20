@@ -1,16 +1,25 @@
 <?php
 
+
+
 /* ------------------------------------
  * ----- OPTIONS ----------------------
  * ----------------------------------*/
  
-     // Debug
-     $activate_debugger = 'all'; // 'all'/'dafault'/'none'
+     // PHP Debug -- By default on 'all' to best code practices
+     define('ENABLE_PHP_DEBUGGER',    'all'); // 'all'/'default'/'none'
      
      // jQuery
-     $activate_jquery = true;
-     $activate_jquery_ui = false;
-     $activate_jquery_mobile = false;
+     define('ENABLE_JQUERY',          true);
+     define('ENABLE_JQUERY_UI',       false);
+     define('ENABLE_JQUERY_MOBILE',   false);
+     
+     
+ /* -----------------------------------
+  * ----- SOME STUFF ------------------
+  * ---------------------------------*/    
+     
+     // Nothing here anymore (for the moment)
      
      
      
@@ -26,7 +35,7 @@
     
     
 /* ------------------------------------
- * ----- HHOOKS -----------------------
+ * ----- HOOKS ------------------------
  * ----------------------------------*/
     
     add_action('wp_enqueue_scripts', 'add_styles'); // Style
@@ -61,19 +70,20 @@
 
     function add_scripts(){
 
-        /* using google hosted JS scripts for better performance, you can find more infos there: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
-        if($activate_jquery){        
+        
+        /* using google hosted JS scripts, if you wonder why, check this link: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
+        if(ENABLE_JQUERY){        
             wp_deregister_script('jquery'); 
             wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"), false, '1.11.0', true);
             wp_enqueue_script('jquery');
         }
         
-        if($activate_jquery_ui){   
+        if(ENABLE_JQUERY_MOBILE){   
             wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
             wp_enqueue_script('jquery_ui');
         }
         
-        if($activate_jquery_mobile){  
+        if(ENABLE_JQUERY_MOBILE){  
             wp_register_script('jquery_mobile', ("https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
             wp_enqueue_script('jquery_mobile');
         }
@@ -88,17 +98,34 @@
  * ----- DEBUGGER ---------------------
  * ----------------------------------*/
 
-    if($activate_debugger == 'all'){
-        // Enable 
-        error_reporting(E_ALL);
-    }
-    elseif($activate_debugger == 'default'){
-        // Default PHP configuration
-        error_reporting(E_ALL ^ E_NOTICE);
-    }
-    elseif($activate_debugger == 'none'){
-        // Disable debugger, no error will be displayed
-        error_reporting(E_ALL);
+    switch(ENABLE_PHP_DEBUGGER){
+        case 'all':
+            error_reporting(E_ALL);
+            break;
+        case 'default':
+            // Default PHP configuration
+            error_reporting(E_ALL ^ E_NOTICE);
+            break;
+        case 'none':
+            // Disable debugger, no error will be displayed
+            error_reporting(E_ALL);
+            break;
     }
     
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

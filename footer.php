@@ -2,7 +2,7 @@
 /**
  * Displaying the footer
  *
- * Contains footer content and the closing of the #main and #page div elements.
+ * Contains footer content and the closing of the #page, #main and #main_content div elements.
  *
  */
 ?>
@@ -19,9 +19,9 @@
 
         <!-- footer, scripts and libraries -->       
         <?php
-            php wp_footer();
+            wp_footer();
         ?>
-        <!-- you should place your script under this line for performance -->
+        <!-- you should place your script under this line for best performance -->
 
     </body>
 </html>

@@ -19,7 +19,9 @@
      <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width">
-        <title><?php wp_title( '', true, 'right' ); ?></title>
+        
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/style.css">
@@ -37,10 +39,12 @@
     <body <?php body_class(); ?>>
     <div id="page">
         <header>
-                <nav id="primary-navigation">
+                <nav id="primary_navigation">
                     <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
                 </nav>
+                
+                <!--<a href="" id="responsive_navigation_toggle" class="mobile_only">&#9776;</a>-->
         </header>
 
-        <div id="main">     
+        <div id="main">
             <div id="main_content">
