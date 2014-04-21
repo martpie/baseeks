@@ -40,7 +40,16 @@
     <div id="page">
         <header>
                 <nav id="primary_navigation">
-                    <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
+                    <div id="primary_navigation_menu_toggle" class="mobile_only">
+                        &#9776;
+                    </div>
+                    <div id="primary_navigation_menu" class="mobile_only none">
+                        <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
+                    </div>
+                    
+                    <div id="classic_navigation" class="desktop_only">
+                        <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
+                    </div>
                 </nav>
                 
                 <!--<a href="" id="responsive_navigation_toggle" class="mobile_only">&#9776;</a>-->

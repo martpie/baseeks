@@ -16,7 +16,13 @@ Incoming.
 
 #### Changelog
 
-###### 27/03/2014
+###### 21/04/2014
+
+* ```screenshot.png``` updated to Wordpress guidelines
+* Some CSS causing useless overflows removed
+* Stylesheets improvements
+
+###### 20/04/2014
 
 * Make it works is even better
 * Various code improvements

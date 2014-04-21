@@ -1,0 +1,109 @@
+/* You can add your own general css rules here */
+
+
+
+
+/* Summary: 
+ *
+ * .no-select       disable select
+ *
+ * .inline          display container as inline
+ * .block           display container as block
+ * .inline-block    display container as inline-block
+ * .none    display container as none
+ *
+ * .absolute        absolute position for the div
+ * .fixed           fixed position for the div
+ * .relative        relative position for the div
+ * .static          static position for the div
+ *
+ * .mobile_only     display container only if widthscreen < 960px
+ * .desktop_only    display container only if widthscreen > 960px
+ *
+ */
+
+
+/* ------------------------------------
+ * ----- GENERAL ----------------------
+ * ----------------------------------*/
+
+.no_select{
+    -webkit-user-select:    none;
+     -khtml-user-select:    none;
+       -moz-user-select:    none;
+        -ms-user-select:    none;
+            user-select:    none;
+    -webkit-touch-callout:  none;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- DISPLAYING BLOCKS ------------
+ * ----------------------------------*/
+
+.inline{
+    display: inline !important;
+}
+
+.block{
+    display: block !important;
+}
+
+.inline-block{
+    display: inline-block !important;
+}
+
+.none{
+    display: none !important;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- POSITIONNING -----------------
+ * ----------------------------------*/
+
+.absolute{
+    position: absolute !important;
+}
+
+.fixed{
+    position: fixed !important;
+}
+
+.relative{
+    position: relative !important;
+}
+
+.static{
+    position: static !important;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- RESPONSIVE -------------------
+ * ----------------------------------*/
+
+.mobile_only{
+    display: none !important;
+}
+
+.desktop_only{
+    display: block !important;
+}
+
+@media screen and (max-width: 960px){
+    
+    .mobile_only{
+        display: block !important;
+    }
+
+    .desktop_only{
+        display: none !important;
+    }
+}

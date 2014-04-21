@@ -11,7 +11,7 @@
 
 
             <footer>
-            
+                Footer
             </footer>
             
         </div><!-- #page -->

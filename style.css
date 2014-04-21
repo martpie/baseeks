@@ -2,15 +2,17 @@
  * Theme Name: Baseeks
  * Theme URI: https://github.com/KeitIG/Baseeks
  * Description: A basic theme for Wordpress
- * Version: 0.1
+ * Version: 0.2
  * Author: Pierre van Mart (KeitIG)
  * Author URI: http://pierrevanmart.olympe.in
+ * License: The MIT License (MIT)
+ *
  */
 
 
 
 /**
- * YOU SHOULD NOT PLACE CSS HERE, IT WON'T BE APPLIED
+ * YOU SHOULD NOT PLACE CSS HERE, IT COULD NOT BE APPLIED
  * USE CORRECT STYLESHEETS AVAILABLE ON css/ DIRECTORY
  * 
  * TO CREATE YOUR OWN STYLESHEETS, PLEASE USE functions.php
