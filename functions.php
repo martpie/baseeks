@@ -6,14 +6,22 @@
  * ----- OPTIONS ----------------------
  * ----------------------------------*/
  
-     // PHP Debug -- By default on 'all' to best code practices
-     define('ENABLE_PHP_DEBUGGER',    'all'); // 'all'/'default'/'none'
+    // PHP Debug -- By default on 'all' to best code practices
+    define('ENABLE_PHP_DEBUGGER',       'all'); // 'all'/'default'/'none'
      
-     // jQuery
-     define('ENABLE_JQUERY',          true);
-     define('ENABLE_JQUERY_UI',       false);
-     define('ENABLE_JQUERY_MOBILE',   false);
+    // jQuery
+    define('ENABLE_JQUERY',             true);
+    define('ENABLE_JQUERY_UI',          false);
+    define('ENABLE_JQUERY_MOBILE',      false);
      
+    // Google Analytics
+    define('ENABLE_GOOGLE_ANALYTICS',   false);
+    
+    // Retina.js
+    define('ENABLE_RETINA_JS',          false);
+
+     
+           
      
  /* -----------------------------------
   * ----- SOME STUFF ------------------
@@ -28,7 +36,7 @@
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
 
-    add_theme_support('menus'); // Menus
+    add_theme_support('menus'); // Enable enus
 
     remove_action('wp_head', 'wp_generator'); // Security: hide WordPress version
     
@@ -50,15 +58,17 @@
 
     function add_styles(){
 
-        wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, false);
-        wp_register_style('style_theme', get_bloginfo('template_directory').'/css/style_theme.css', false, null, false);
-        wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, false);
-        wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, false);
+        wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, false);      // css normalizer for all browsers
+        wp_register_style('style_theme', get_bloginfo('template_directory').'/css/style_theme.css', false, null, false);              // theme style, including boxes, and other stuffs
+        wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, false);                // your style
+        wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, false);    // your responsive style (if needed)
+        wp_register_style('style_retina', get_bloginfo('template_directory').'/css/style_retina.css', false, null, false);            // your retina style (if needed)
 
         wp_enqueue_style('style_normalize');
         wp_enqueue_style('style_theme');
         wp_enqueue_style('style_main');
         wp_enqueue_style('style_responsive');
+        wp_enqueue_style('style_retina');
 
         /* You can add you own stylesheets here */
     }
@@ -71,7 +81,6 @@
  * ----------------------------------*/
 
     function add_scripts(){
-
         
         /* using google hosted JS scripts, if you wonder why, check this link: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
         if(ENABLE_JQUERY){        
@@ -89,8 +98,20 @@
             wp_register_script('jquery_mobile', ("https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
             wp_enqueue_script('jquery_mobile');
         }
-
+               
+        if(ENABLE_GOOGLE_ANALYTICS){  
+            wp_register_script('google_analytics', (get_template_directory().'/js/google_analytics.js'), false, '1.0', true);
+            wp_enqueue_script('google_analytics');
+        }
+        
+        if(ENABLE_RETINA_JS){  
+            wp_register_script('retina_js', (get_template_directory().'/js/libs/retina.min.js'), false, '1.3.0', true);
+            wp_enqueue_script('retina_js');
+        }
+        
+        
         /* You can add you own scripts here */
+        
     }
     
     

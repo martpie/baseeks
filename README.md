@@ -16,6 +16,13 @@ Incoming.
 
 #### Changelog
 
+###### 28/04/2014
+
+* Google Analytics support
+* Now use normalizer.css (in ```style_normalize.css```) from Nicolas Gallagher (more info at https://github.com/necolas/normalize.css)
+* Retina.js support
+* Retina CSS stylesheets added
+
 ###### 21/04/2014
 
 * ```screenshot.png``` updated to Wordpress guidelines
