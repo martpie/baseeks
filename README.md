@@ -14,6 +14,13 @@ Incoming.
 
 ===
 
+#### Blueprints
+
+* Create a child theme to simplify theme updates
+* Create an auto update theme script
+
+===
+
 #### Changelog
 
 ###### 28/04/2014
