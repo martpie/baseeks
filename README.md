@@ -23,6 +23,10 @@ Incoming.
 
 #### Changelog
 
+###### 29/04/2014
+
+* getBrowser() PHP funtion added
+
 ###### 28/04/2014
 
 * Google Analytics support

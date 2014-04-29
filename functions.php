@@ -12,13 +12,14 @@
     // jQuery
     define('ENABLE_JQUERY',             true);
     define('ENABLE_JQUERY_UI',          false);
-    define('ENABLE_JQUERY_MOBILE',      false);
-     
-    // Google Analytics
-    define('ENABLE_GOOGLE_ANALYTICS',   false);
+    define('ENABLE_JQUERY_MOBILE',      false);   
     
-    // Retina.js
+    // JS Extensions
+    define('ENABLE_GOOGLE_ANALYTICS',   false);
     define('ENABLE_RETINA_JS',          false);
+
+    // PHP Extentions
+    define('ENABLE_GET_BROWSER',        false);
 
      
            
@@ -33,6 +34,15 @@
      
      
 /* ------------------------------------
+ * ----- VARIABLES --------------------
+ * ----------------------------------*/
+    
+    $root = dirname(__FILE__);
+
+
+
+
+/* ------------------------------------
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
 
@@ -42,6 +52,7 @@
     
     
     
+
 /* ------------------------------------
  * ----- HOOKS ------------------------
  * ----------------------------------*/
@@ -114,9 +125,20 @@
         
     }
     
-    
-    
-    
+
+
+
+/* ------------------------------------
+ * ----- PHP EXTENSIONS ---------------
+ * ----------------------------------*/
+
+    if(ENABLE_GET_BROWSER){  
+        require_once($root . '/../php/get_browser.php');
+    }
+
+
+
+ 
 /* ------------------------------------
  * ----- DEBUGGER ---------------------
  * ----------------------------------*/

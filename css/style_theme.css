@@ -10,7 +10,7 @@
  * .inline          display container as inline
  * .block           display container as block
  * .inline-block    display container as inline-block
- * .none    display container as none
+ * .none            display container as none
  *
  * .absolute        absolute position for the div
  * .fixed           fixed position for the div
@@ -21,6 +21,8 @@
  * .desktop_only    display container only if widthscreen > 960px
  *
  */
+
+
 
 
 /* ------------------------------------
@@ -51,7 +53,7 @@
     display: block !important;
 }
 
-.inline-block{
+.inline_block{
     display: inline-block !important;
 }
 
@@ -63,7 +65,7 @@
 
 
 /* ------------------------------------
- * ----- POSITIONNING -----------------
+ * ----- POSITIONNING -----------------   Position property, floats, ect...
  * ----------------------------------*/
 
 .absolute{
@@ -82,6 +84,21 @@
     position: static !important;
 }
 
+.center_block{
+    margin: auto;
+}
+
+.f_left{
+    float: left;
+}
+
+.f_right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
 
 
 
@@ -106,4 +123,87 @@
     .desktop_only{
         display: none !important;
     }
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BOXES ------------------------   Containers, boxes, width, ect...
+ * ----------------------------------*/
+
+.container{
+    font-size: 0; /* fix inline whitespace problem */
+}
+
+.box{
+    display: inline-block;
+    font-size: initial;
+}
+
+.w_50{                       /* 2 columns layout */
+    width: 50%;
+}
+
+.w_33{                       /* 3 columns layout */
+    width: 33.333333333%;
+}
+
+.w_67{
+    width: 66.666666666%;
+}
+
+.w_25{                       /* 4 columns layout */
+    width: 25%;
+}
+
+.w_75{
+    width: 75%;
+}
+
+.w_20{                       /* 5 columns layout */
+    width: 20%;
+}
+
+.w_40{
+    width: 40%;
+}
+
+.w_60{
+    width: 60%;
+}
+
+.w_80{
+    width: 80%;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BACKGROUNDS ------------------
+ * ----------------------------------*/
+
+.b_scroll{                             /* Background Attachment */
+    background-attachment: scroll;
+}
+
+.b_fixed{
+    background-attachment: fixed;
+}
+
+.b_local{
+    background-attachment: local;
+}
+
+.no_repeat{                            /* Background Repeat */
+    background-repeat: no-repeat;
+}
+
+.repeat_x{
+    background-repeat: repeat-x;
+}
+
+.repeat_y{
+    background-repeat: repeat-y;
 }
