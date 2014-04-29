@@ -44,11 +44,11 @@ Incoming.
 
 * Make it works is even better
 * Various code improvements
-* Debugger 'none' option fixed
+* PHP Debugger 'none' option fixed
 
 ###### 27/03/2014
 
-* Debugger toggle in ```functions.php```
+* PHP Debugger toggle in ```functions.php```
 
 ###### 25/03/2014
 
