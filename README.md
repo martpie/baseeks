@@ -23,6 +23,10 @@ Incoming.
 
 #### Changelog
 
+###### 02/05/2014
+
+* ````style_theme.css``` largely improved + documentation added
+
 ###### 29/04/2014
 
 * getBrowser() PHP funtion added

@@ -5,7 +5,7 @@
 
 /* Summary: 
  *
- * .no-select       disable select
+ * .no_select       disable select
  *
  * .inline          display container as inline
  * .block           display container as block
@@ -16,9 +16,58 @@
  * .fixed           fixed position for the div
  * .relative        relative position for the div
  * .static          static position for the div
- *
+ * .f_left          float left
+ * .f_right         float right
+ * .clear           clear floats
+ * 
  * .mobile_only     display container only if widthscreen < 960px
  * .desktop_only    display container only if widthscreen > 960px
+ *
+ * --------------------------------------------------------------------------------------------
+ *
+ * .container                define a container
+ * .container_pb             add some padding at the bottom of a container
+ * .container_delimited      add a black border at the top of the container for more visibility
+ *
+ * .box                      create a box (should be in a container)
+ * .w_xx                     set the box width to xx% // differents layour are available:
+ *                                 .w_100                           1 column  layout
+ *                                 .w_50                            2 columns layout
+ *                                 .w_67, .w_33                     3 columns layout
+ *                                 .w_75, .w_25                     4 columns layout
+ *                                 .w_80, .w_60, .w_40, .w_20       5 columns layout
+ *
+ * .p_xx                     add xx padding // available values are 20, 40, 100
+ * .m_xx                     add xx margin  // available values are 20, 40, 100
+ *
+ * --------------------------------------------------------------------------------------------
+ * 
+ * .b_scroll       make the background scrollable
+ * .b_fixed        make the background fixed
+ * .b_local        make the background local
+ *
+ * .no_repeat      disable background-repeat
+ * .repeat_x       allow repeat-x
+ * .repeat_y       allow repeat-y
+ *
+ * --------------------------------------------------------------------------------------------
+ * 
+ * .ta_left        align the text to the left
+ * .ta_right       align the text to the right
+ * .ta_center      center the text
+ * .ta_justify     justify the text
+ *
+ * .italic         make the text italic
+ * .bold           make the text bold
+ * .underline      make the text underline
+ * .strike         make the text striked
+ *
+ * --------------------------------------------------------------------------------------------
+ * 
+ * .box_shadow          make a box shadowe
+ * .bix_shadow_inset    make an inset box shadow
+ * 
+ * .img_circle          make an image as circle
  *
  */
 
@@ -38,27 +87,9 @@
     -webkit-touch-callout:  none;
 }
 
-
-
-
-/* ------------------------------------
- * ----- DISPLAYING BLOCKS ------------
- * ----------------------------------*/
-
-.inline{
-    display: inline !important;
-}
-
-.block{
-    display: block !important;
-}
-
-.inline_block{
-    display: inline-block !important;
-}
-
-.none{
-    display: none !important;
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 
@@ -136,9 +167,22 @@
     font-size: 0; /* fix inline whitespace problem */
 }
 
+.container_pb{
+    padding-bottom: 20px;
+}
+
+.container_delimited{
+    border-top: solid 1px black;
+}
+
 .box{
     display: inline-block;
-    font-size: initial;
+    font-size: medium;
+    vertical-align: middle;
+}
+
+.w_100{                      /* 1 column layout */
+    display: block;
 }
 
 .w_50{                       /* 2 columns layout */
@@ -206,4 +250,132 @@
 
 .repeat_y{
     background-repeat: repeat-y;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- TEXT-ALIGN ------------------
+ * ----------------------------------*/
+
+.ta_left{
+    text-align: left;
+}
+
+.ta_right{
+    text-align: right;
+}
+
+.ta_center{
+    text-align: center;
+}
+
+.ta_justify{
+    text-align: justify
+}
+
+
+
+
+/* ------------------------------------
+ * ----- PADDING / MARGIN -------------
+ * ----------------------------------*/
+
+.p_20{
+    padding: 20px;
+}
+
+.p_40{
+    padding: 40px;
+}
+
+.p_100{
+    padding: 100px;
+}
+
+.m_20{
+    margin: 20px;
+}
+
+.m_40{
+    margin: 40px;
+}
+
+.m_100{
+    margin: 100px;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BOX-SHADOW -------------------
+ * ----------------------------------*/
+
+.box_shadow{
+    box-shadow: 0 0 5px black;
+}
+
+.box_shadow_inset{
+    box-shadow: inset 0 0 5px black;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- IMAGES -----------------------
+ * ----------------------------------*/
+
+.img_circle{
+    -webkit-border-radius: 10000px;
+       -moz-border-radius: 10000px;
+            border-radius: 10000px;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- DISPLAYING BLOCKS ------------
+ * ----------------------------------*/
+
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+}
+
+.inline_block{
+    display: inline-block;
+}
+
+.none{
+    display: none;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- FORMATING TEXT ---------------
+ * ----------------------------------*/
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.strike{
+    text-decoration: line-through;
 }
