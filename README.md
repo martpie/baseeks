@@ -23,6 +23,11 @@ Incoming.
 
 #### Changelog
 
+###### 04/05/2014 - 08/05/2014
+
+* ```style_theme.css``` is now responsive
+* ```custom.js``` added
+
 ###### 02/05/2014
 
 * ```style_theme.css``` largely improved + documentation added

@@ -111,15 +111,17 @@
         }
                
         if(ENABLE_GOOGLE_ANALYTICS){  
-            wp_register_script('google_analytics', (get_template_directory().'/js/google_analytics.js'), false, '1.0', true);
+            wp_register_script('google_analytics', (get_template_directory_uri().'/js/google_analytics.js'), false, '1.0', true);
             wp_enqueue_script('google_analytics');
         }
         
         if(ENABLE_RETINA_JS){  
-            wp_register_script('retina_js', (get_template_directory().'/js/libs/retina.min.js'), false, '1.3.0', true);
+            wp_register_script('retina_js', (get_template_directory_uri().'/js/libs/retina.min.js'), false, '1.3.0', true);
             wp_enqueue_script('retina_js');
         }
         
+        wp_register_script('custom', (get_template_directory_uri().'/js/custom.js'), false, '1.0', true);
+        wp_enqueue_script('custom');
         
         /* You can add you own scripts here */
         

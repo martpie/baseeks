@@ -418,10 +418,57 @@ a{
  * ----------------------------------*/
 
 @media only screen  
-and (max-width: 1024px)  {
-
+and (max-width: 960px)
+and (min-width: 768px) {
     .w_50, .w_33, .w_67, .w_25, .w_75, .w_20, .w_40, .w_80, .w_10{
-        width: 100%;  
+        width: 50%;  
+    }   
+}
+
+@media only screen and (max-width: 767px) {
+    .w_50, .w_33, .w_67, .w_25, .w_75, .w_20, .w_40, .w_80, .w_10{
+        width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .w_100_resp{
+        width: 100%;
     }
     
+    .w_33_resp{
+        width: 33.333333333%;
+    }
+    
+    .w_67_resp{
+        width: 66.666666666%;
+    }
+    
+    .w_25_resp{
+        width: 25%;
+    }
+    
+    .w_75_resp{
+        width: 75%;
+    }
+    
+    .w_20_resp{
+        width: 20%;
+    }
+    
+    .w_40_resp{
+        width: 40%;
+    }
+    
+    .w_60_resp{
+        width: 60%;
+    }
+    
+    .w_80_resp{
+        width: 80%;
+    }
+    
+    .w_10_resp{
+        width: 10%;
+    }
 }
