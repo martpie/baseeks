@@ -100,7 +100,7 @@
             wp_enqueue_script('jquery');
         }
         
-        if(ENABLE_JQUERY_MOBILE){   
+        if(ENABLE_JQUERY_UI){   
             wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
             wp_enqueue_script('jquery_ui');
         }

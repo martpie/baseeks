@@ -4,8 +4,19 @@
 
 
 /* ------------------------------------
- * ----- RESPONSIVE FOR SMALLER -------
- * ----- DEVICES --------------------*/
+ * ----- DESKTOP ONLY -----------------
+ * ----------------------------------*/
+
+@media screen and (max-width: 960px){
+    
+}
+
+
+
+
+/* ------------------------------------
+ * ----- RESPONSIVE TABLETS AND -------
+ * ----- SMARTPHONES ----------------*/
 
 @media screen and (max-width: 960px){
 

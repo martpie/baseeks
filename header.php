@@ -19,6 +19,7 @@
      <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         
@@ -51,8 +52,6 @@
                         <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
                     </div>
                 </nav>
-                
-                <!--<a href="" id="responsive_navigation_toggle" class="mobile_only">&#9776;</a>-->
         </header>
 
         <div id="main">
