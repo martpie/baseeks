@@ -25,6 +25,10 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release Changelog
 
+###### 14/05/2014
+
+* Destop only rule fixed
+
 ###### 09/05/2014
 
 * JqueryUI fixed
