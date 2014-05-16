@@ -25,9 +25,10 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release Changelog
 
-###### 14/05/2014
+###### 16/05/2014
 
 * Destop only rule fixed
+* ```template``` variable added for better script integration in ```custom.js```
 
 ###### 09/05/2014
 
