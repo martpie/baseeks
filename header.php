@@ -31,6 +31,9 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+        <!-- Fonts -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        
         <?php
             /* please notice that jQuery is called by wp_footer(), jQuery won't work here */
             wp_head();
@@ -40,18 +43,6 @@
     <body <?php body_class(); ?>>
     <div id="page">
         <header>
-                <nav id="primary_navigation">
-                    <div id="primary_navigation_menu_toggle" class="mobile_only">
-                        &#9776;
-                    </div>
-                    <div id="primary_navigation_menu" class="mobile_only none">
-                        <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
-                    </div>
-                    
-                    <div id="classic_navigation" class="desktop_only">
-                        <?php wp_nav_menu(array('menu' => 'primary_menu', 'menu_class' => 'primary_menu')); ?>
-                    </div>
-                </nav>
         </header>
 
         <div id="main">
