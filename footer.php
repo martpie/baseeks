@@ -27,7 +27,7 @@
 
         <!-- footer, scripts and libraries -->       
         <script>
-            var template = <?php echo $template_name; ?>;
+            var template = '<?php echo $template_name; ?>';
         </script>
         <?php
             wp_footer();

@@ -20,6 +20,7 @@ You will find everything it theme files, if you have any questions contact me !
 
 * Create a child theme to simplify theme updates
 * Create an auto update theme script
+* JS template variable fixed
 
 ===
 
