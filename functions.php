@@ -10,19 +10,25 @@
     define('ENABLE_PHP_DEBUGGER',       'all'); // 'all'/'default'/'none'
      
     // jQuery
-    define('ENABLE_JQUERY',             true);
-    define('ENABLE_JQUERY_UI',          false);
-    define('ENABLE_JQUERY_MOBILE',      false);   
+    define('ENABLE_JQUERY',                true);
+    define('ENABLE_JQUERY_UI',             false);
+    define('ENABLE_JQUERY_MOBILE',         false);   
     
     // JS Extensions
-    define('ENABLE_GOOGLE_ANALYTICS',   false);
-    define('ENABLE_RETINA_JS',          false);
+    define('ENABLE_GOOGLE_ANALYTICS',      false);
+    define('ENABLE_RETINA_JS',             false);
 
     // PHP Extentions
-    define('ENABLE_GET_BROWSER',        false);
+    define('ENABLE_GET_BROWSER',           false);
+    
+    // Wordpress Options
+    define('ENABLE_MENUS',                 true);
+    define('ENABLE_POST_THUMBNAILS',       true);
+    define('POST_THUMBNAILS_POST_TYPE',    array('post')); // Post Type where thumbnail is enabled
+    define('DISABLE_ADMIN_BAR',            false);
 
-     
-           
+
+         
      
  /* -----------------------------------
   * ----- SOME STUFF ------------------
@@ -45,8 +51,6 @@
 /* ------------------------------------
  * ----- GENERAL SUPPORTS -------------
  * ----------------------------------*/
-
-    add_theme_support('menus'); // Enable enus
 
     remove_action('wp_head', 'wp_generator'); // Security: hide WordPress version
     
@@ -141,6 +145,25 @@
 
 
  
+/* ------------------------------------
+ * ----- WORDPRESS OPTIONS ------------
+ * ----------------------------------*/
+        
+    if(ENABLE_MENUS){  
+        add_theme_support('menus'); // Enable enus 
+    }
+
+    if(ENABLE_POST_THUMBNAILS){  
+        add_theme_support( 'post-thumbnails', POST_THUMBNAILS_POST_TYPE);
+    }
+    
+    if(DISABLE_ADMIN_BAR){  
+        add_filter('show_admin_bar', '__return_false');
+    }
+
+
+
+
 /* ------------------------------------
  * ----- DEBUGGER ---------------------
  * ----------------------------------*/

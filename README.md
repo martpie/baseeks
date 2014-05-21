@@ -26,6 +26,12 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release Changelog
 
+###### 21/05/2014
+
+* Option to enable menus added
+* Option to enable post-thummbnails added
+* Option to disable admin bar added
+
 ###### 19/05/2014
 
 * Font-Awesome support added
