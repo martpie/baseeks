@@ -36,9 +36,14 @@
  *                                 .w_67, .w_33                     3 columns layout
  *                                 .w_75, .w_25                     4 columns layout
  *                                 .w_80, .w_60, .w_40, .w_20       5 columns layout
+ * FOR RESPONSIVE: just add 'w_xx_resp' to a 'w_xx' class to apply xx width in responsive
  *
  * .p_xx                     add xx padding // available values are 20, 40, 100
  * .m_xx                     add xx margin  // available values are 20, 40, 100
+ *
+ * .va_top                   align a box at the top of its container
+ * .va-middle                align a box at the middle of its container
+ * .va_bottom                align a box at the bottom of its container
  *
  * --------------------------------------------------------------------------------------------
  * 
@@ -232,6 +237,25 @@ hr { /* hr normalizer */
 
 .w_10{                       /* 10 columns layout */
     width: 10%;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BACKGROUNDS ------------------
+ * ----------------------------------*/
+
+.va_top{
+    vertical-align: top;
+}
+
+.va_middle{
+    vertical-align: middle;
+}
+
+.va_bottom{
+    vertical-align: bottom;
 }
 
 

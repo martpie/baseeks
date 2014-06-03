@@ -3,29 +3,29 @@
 
 
 /* ------------------------------------
- * ----- OPTIONS ----------------------
+ * ----- THEME OPTIONS ----------------
  * ----------------------------------*/
  
-    // PHP Debug -- By default on 'all' to best code practices
+    // PHP Debug -- By default on 'all' for best code practices
     define('ENABLE_PHP_DEBUGGER',       'all'); // 'all'/'default'/'none'
      
     // jQuery
-    define('ENABLE_JQUERY',                true);
-    define('ENABLE_JQUERY_UI',             false);
-    define('ENABLE_JQUERY_MOBILE',         false);   
+    define('ENABLE_JQUERY',                true);   // true / false
+    define('ENABLE_JQUERY_UI',             false);  // true / false
+    define('ENABLE_JQUERY_MOBILE',         false);  // true / false   
     
     // JS Extensions
-    define('ENABLE_GOOGLE_ANALYTICS',      false);
-    define('ENABLE_RETINA_JS',             false);
+    define('ENABLE_GOOGLE_ANALYTICS',      false);  // true / false
+    define('ENABLE_RETINA_JS',             false);  // true / false
 
-    // PHP Extentions
-    define('ENABLE_GET_BROWSER',           false);
+    // Baseeks PHP Extentions
+    define('ENABLE_GET_BROWSER',           false);  // true / false
     
-    // Wordpress Options
-    define('ENABLE_MENUS',                 true);
-    define('ENABLE_POST_THUMBNAILS',       true);
-    define('POST_THUMBNAILS_POST_TYPE',    array('post')); // Post Type where thumbnail is enabled
-    define('DISABLE_ADMIN_BAR',            false);
+    // Baseeks Wordpress Options
+    define('ENABLE_MENUS',                 true);   // true / false
+    define('ENABLE_POST_THUMBNAILS',       true);   // true / false
+    define('POST_THUMBNAILS_POST_TYPE',    'post'); // Type of the post where thumbnails are enabled
+    define('DISABLE_ADMIN_BAR',            false);  // true / false
 
 
          
@@ -73,11 +73,11 @@
 
     function add_styles(){
 
-        wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, false);      // css normalizer for all browsers
-        wp_register_style('style_theme', get_bloginfo('template_directory').'/css/style_theme.css', false, null, false);              // theme style, including boxes, and other stuffs
-        wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, false);                // your style
-        wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, false);    // your responsive style (if needed)
-        wp_register_style('style_retina', get_bloginfo('template_directory').'/css/style_retina.css', false, null, false);            // your retina style (if needed)
+        wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, 'all');      // css normalizer for all browsers
+        wp_register_style('style_theme', get_bloginfo('template_directory').'/css/style_theme.css', false, null, 'all');              // theme style, including boxes, and other stuffs
+        wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, 'all');                // your style
+        wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, 'all');    // your responsive style (if needed)
+        wp_register_style('style_retina', get_bloginfo('template_directory').'/css/style_retina.css', false, null, 'all');            // your retina style (if needed)
 
         wp_enqueue_style('style_normalize');
         wp_enqueue_style('style_theme');

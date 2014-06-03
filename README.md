@@ -26,6 +26,12 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release Changelog
 
+###### 26/05/2014
+
+* Last realease for alpha-1
+* Better W3C compatibility
+* Vertical-align rule in ```style_theme.css```
+
 ###### 21/05/2014
 
 * Option to enable menus added
