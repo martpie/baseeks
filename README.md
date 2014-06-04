@@ -24,9 +24,23 @@ You will find everything it theme files, if you have any questions contact me !
 
 ===
 
-#### Pre-Release Changelog
+#### Pre-Release 2 Changelog
 
-###### 26/05/2014
+###### 04/05/2014
+
+* Now based on Bootstrap 3
+* Blank title on static homepage fixed
+* Fonts moved from ```header.php``` to ```functions.php```
+* Useless protocol for CDN-hosted libraries removed
+* Useless ```<meta>``` removed
+* Useless ```<div>``` removed
+
+===
+===
+
+#### Pre-Release 1 Changelog
+
+###### 04/06/2014
 
 * Last realease for alpha-1
 * Better W3C compatibility

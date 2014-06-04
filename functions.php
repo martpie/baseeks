@@ -24,7 +24,7 @@
     // Baseeks Wordpress Options
     define('ENABLE_MENUS',                 true);   // true / false
     define('ENABLE_POST_THUMBNAILS',       true);   // true / false
-    define('POST_THUMBNAILS_POST_TYPE',    'post'); // Type of the post where thumbnails are enabled
+    define('POST_THUMBNAILS_POST_TYPE',    serialize(array('post'))); // Type of the post where thumbnails are enabled
     define('DISABLE_ADMIN_BAR',            false);  // true / false
 
 
@@ -49,10 +49,10 @@
 
 
 /* ------------------------------------
- * ----- GENERAL SUPPORTS -------------
+ * ----- SECURITY ---------------------
  * ----------------------------------*/
 
-    remove_action('wp_head', 'wp_generator'); // Security: hide WordPress version
+    remove_action('wp_head', 'wp_generator'); // Hide WordPress version
     
     
     
@@ -61,8 +61,9 @@
  * ----- HOOKS ------------------------
  * ----------------------------------*/
     
-    add_action('wp_enqueue_scripts', 'add_styles'); // Style
+    add_action('wp_enqueue_scripts', 'add_styles');  // Style
     add_action('wp_enqueue_scripts', 'add_scripts'); // Scripts
+    add_action('wp_enqueue_scripts', 'add_fonts');   // Fonts
 
 
 
@@ -74,13 +75,13 @@
     function add_styles(){
 
         wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, 'all');      // css normalizer for all browsers
-        wp_register_style('style_theme', get_bloginfo('template_directory').'/css/style_theme.css', false, null, 'all');              // theme style, including boxes, and other stuffs
+        wp_register_style('style_bootstrap', get_bloginfo('template_directory').'/css/bootstrap/bootstrap.css', false, null, 'all');  // bootstrap stylesheet
         wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, 'all');                // your style
         wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, 'all');    // your responsive style (if needed)
         wp_register_style('style_retina', get_bloginfo('template_directory').'/css/style_retina.css', false, null, 'all');            // your retina style (if needed)
 
         wp_enqueue_style('style_normalize');
-        wp_enqueue_style('style_theme');
+        wp_enqueue_style('style_bootstrap');
         wp_enqueue_style('style_main');
         wp_enqueue_style('style_responsive');
         wp_enqueue_style('style_retina');
@@ -100,17 +101,17 @@
         /* using google hosted JS scripts, if you wonder why, check this link: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
         if(ENABLE_JQUERY){        
             wp_deregister_script('jquery'); 
-            wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"), false, '1.11.0', true);
+            wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false, '1.11.1', true);
             wp_enqueue_script('jquery');
         }
         
         if(ENABLE_JQUERY_UI){   
-            wp_register_script('jquery_ui', ("https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
+            wp_register_script('jquery_ui', ("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);           
             wp_enqueue_script('jquery_ui');
         }
         
         if(ENABLE_JQUERY_MOBILE){  
-            wp_register_script('jquery_mobile', ("https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
+            wp_register_script('jquery_mobile', ("//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
             wp_enqueue_script('jquery_mobile');
         }
                
@@ -124,18 +125,35 @@
             wp_enqueue_script('retina_js');
         }
         
+        /* Bootstrap */
+        wp_register_script('bootstrap', (get_template_directory_uri().'/js/libs/bootstrap.min.js'), false, '3.1.1', true);
+        wp_enqueue_script('bootstrap');
+        
+        /* Your custom JS file */
         wp_register_script('custom', (get_template_directory_uri().'/js/custom.js'), false, '1.0', true);
         wp_enqueue_script('custom');
         
         /* You can add you own scripts here */
         
     }
-    
+
 
 
 
 /* ------------------------------------
- * ----- PHP EXTENSIONS ---------------
+ * ----- SCRIPTS ----------------------
+ * ----------------------------------*/
+
+function add_fonts() {
+    wp_register_style('font_awesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+    wp_enqueue_style( 'font_awesome');
+}
+       
+
+
+
+/* ------------------------------------
+ * ----- BASEEKS PHP EXTENSIONS -------
  * ----------------------------------*/
 
     if(ENABLE_GET_BROWSER){  
@@ -153,8 +171,9 @@
         add_theme_support('menus'); // Enable enus 
     }
 
-    if(ENABLE_POST_THUMBNAILS){  
-        add_theme_support( 'post-thumbnails', POST_THUMBNAILS_POST_TYPE);
+    if(ENABLE_POST_THUMBNAILS){
+        $post_types = unserialize(POST_THUMBNAILS_POST_TYPE);
+        add_theme_support( 'post-thumbnails', $post_types);
     }
     
     if(DISABLE_ADMIN_BAR){  

@@ -13,11 +13,8 @@
     $template_name = basename(get_page_template());
     
 ?>
-                
-                
-                </div><!-- #main_content -->
-            </div><!-- #main -->           
-
+            
+            </div><!-- #wrap -->           
 
             <footer>
             </footer>
