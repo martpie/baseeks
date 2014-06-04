@@ -26,7 +26,7 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release 2 Changelog
 
-###### 04/05/2014
+###### 04/06/2014
 
 * Now based on Bootstrap 3
 * Blank title on static homepage fixed
@@ -40,9 +40,9 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release 1 Changelog
 
-###### 04/06/2014
+###### 03/06/2014
 
-* Last realease for alpha-1
+* Last realease for pre-release-1
 * Better W3C compatibility
 * Vertical-align rule in ```style_theme.css```
 
