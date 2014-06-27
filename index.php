@@ -2,9 +2,6 @@
 /**
  * Main template File
  *
- * By Astate
- * http://astate.ch
- *
  */
  
 /*
