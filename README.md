@@ -20,11 +20,17 @@ You will find everything it theme files, if you have any questions contact me !
 
 * Create a child theme to simplify theme updates
 * Create an auto update theme script
-* JS template variable fixed
 
 ===
 
 #### Pre-Release 2 Changelog
+
+###### 11/07/2014
+
+* Default template now display WYSIWYG editor's page content
+* JS template variable fixed
+* ```<a>``` and ```<hr />``` normalizer added
+* Useless credits removed
 
 ###### 04/06/2014
 
