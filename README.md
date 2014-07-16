@@ -25,6 +25,10 @@ You will find everything it theme files, if you have any questions contact me !
 
 #### Pre-Release 2 Changelog
 
+###### 16/07/2014
+
+* Google Analytics ```_gaq is not defined``` error fixed
+
 ###### 11/07/2014
 
 * Default template now display WYSIWYG editor's page content

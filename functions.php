@@ -115,7 +115,9 @@
             wp_enqueue_script('jquery_mobile');
         }
                
-        if(ENABLE_GOOGLE_ANALYTICS){  
+        if(ENABLE_GOOGLE_ANALYTICS){
+            wp_register_script('google_analytics_library', "http://www.google-analytics.com/ga.js", false, '1.0', true);
+            wp_enqueue_script('google_analytics_library');
             wp_register_script('google_analytics', (get_template_directory_uri().'/js/google_analytics.js'), false, '1.0', true);
             wp_enqueue_script('google_analytics');
         }
