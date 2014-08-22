@@ -21,7 +21,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/style.css">
-        <link rel="shortcut icon" href="<?php bloginfo('template_directory');?>/img/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" href="<?php bloginfo('template_directory');?>/favicon.png" />
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->  
