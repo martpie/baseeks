@@ -1,5 +1,5 @@
 /* ------------------------------------
- * ----- WHOLE PAGE -------------------
+ * ----- NORMALIZER -------------------
  * ----------------------------------*/
 
 a, a:hover, a:active, a:focus{
@@ -14,6 +14,23 @@ hr { /* hr normalizer */
     height : 1px;
     background : 50% 0 no-repeat;
     margin : 1em 0;
+}
+
+
+
+
+/* ------------------------------------
+ * ----- BASEEKS CLASSES --------------
+ * ----------------------------------*/
+
+.bg_centered{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clear{
+    clear: both;
 }
 
 
