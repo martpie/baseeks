@@ -2,7 +2,7 @@
  * ----- NORMALIZER -------------------
  * ----------------------------------*/
 
-a, a:hover, a:active, a:focus{
+a, a:hover, a:active, a:focus, button, button:hover, button:active, button:focus{
     color: inherit;
     text-decoration: none;
     outline: none;                             /* Fix for webkit browsers */
