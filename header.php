@@ -30,7 +30,7 @@
 
     <body <?php body_class(); ?>>
     
-        <div id="page">
+        <div id="page" class="page-id-<?php get_the_ID(); ?>">
 
             <header>
             </header>

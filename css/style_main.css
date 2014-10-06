@@ -16,6 +16,10 @@ hr { /* hr normalizer */
     margin : 1em 0;
 }
 
+body::-webkit-scrollbar{ /* Remove scrollbar in Webkit browsers */
+    width: 0;
+}
+
 
 
 

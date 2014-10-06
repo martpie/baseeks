@@ -1,5 +1,10 @@
 #### Pre-Release 2 Changelog
 
+###### 24/09/2014
+
+* Some usefull classes added
+* Fine tunning
+
 ###### 08/09/2014
 
 * ```404.php``` added
