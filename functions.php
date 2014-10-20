@@ -96,11 +96,11 @@ function remove_menus(){
 
     function add_styles(){
 
-        wp_register_style('style_normalize', get_bloginfo('template_directory').'/css/style_normalize.css', false, null, 'all');      // css normalizer for all browsers
-        wp_register_style('style_bootstrap', get_bloginfo('template_directory').'/css/bootstrap/bootstrap.css', false, null, 'all');  // bootstrap stylesheet
-        wp_register_style('style_main', get_bloginfo('template_directory').'/css/style_main.css', false, null, 'all');                // your style
-        wp_register_style('style_responsive', get_bloginfo('template_directory').'/css/style_responsive.css', false, null, 'all');    // your responsive style (if needed)
-        wp_register_style('style_retina', get_bloginfo('template_directory').'/css/style_retina.css', false, null, 'all');            // your retina style (if needed)
+        wp_register_style('style_normalize', get_template_directory_uri().'/css/style_normalize.css', false, null, 'all');      // css normalizer for all browsers
+        wp_register_style('style_bootstrap', get_template_directory_uri().'/css/bootstrap/bootstrap.css', false, null, 'all');  // bootstrap stylesheet
+        wp_register_style('style_main', get_template_directory_uri().'/css/style_main.css', false, null, 'all');                // your style
+        wp_register_style('style_responsive', get_template_directory_uri().'/css/style_responsive.css', false, null, 'all');    // your responsive style (if needed)
+        wp_register_style('style_retina', get_template_directory_uri().'/css/style_retina.css', false, null, 'all');            // your retina style (if needed)
 
         wp_enqueue_style('style_normalize');
         wp_enqueue_style('style_bootstrap');

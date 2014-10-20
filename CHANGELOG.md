@@ -1,5 +1,9 @@
 #### Pre-Release 2 Changelog
 
+###### 20/10/2014
+
+* Better Wordpress 4 guidelines integration
+
 ###### 24/09/2014
 
 * Some usefull classes added

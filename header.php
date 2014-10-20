@@ -20,8 +20,8 @@
         
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/style.css">
-        <link rel="icon" type="image/png" href="<?php bloginfo('template_directory');?>/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
+        <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.png" />
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->  
