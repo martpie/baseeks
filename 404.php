@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     $url = get_site_url();
 

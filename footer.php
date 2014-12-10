@@ -6,23 +6,23 @@
  *
  */
 ?>
-                
+
 <?php
-    
+
     // Getting template filename (with the .php extension)
     $template_name = basename(get_page_template());
-    
+
 ?>
-            
-            </div><!-- #wrap -->           
+
+            </div><!-- #wrap -->
 
             <footer>
             </footer>
-            
+
         </div><!-- #page -->
 
 
-        <!-- footer, scripts and libraries -->       
+        <!-- footer, scripts and libraries -->
         <script>
             var template = '<?php echo $template_name; ?>';
         </script>

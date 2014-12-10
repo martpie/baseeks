@@ -1,5 +1,14 @@
 #### Pre-Release 2 Changelog
 
+###### 10/12/2014
+
+* Full refactoring
+* Remove retina.js (bad practice to use it)
+* Update Bootstrap to 3.3.1
+* Update font-awesome to 4.2.0
+* Update normalize.css to 3.0.2
+* Update responsive stylesheet
+
 ###### 20/10/2014
 
 * Better Wordpress 4 guidelines integration
