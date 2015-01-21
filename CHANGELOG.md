@@ -1,5 +1,9 @@
 #### Pre-Release 2 Changelog
 
+###### 21/01/2015
+
+* Remove style_normalize (integrated in Bootstrap)
+
 ###### 10/12/2014
 
 * Full refactoring

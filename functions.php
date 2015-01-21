@@ -97,13 +97,11 @@ function remove_menus(){
 
         // Think about using a CDN for Bootstrap
 
-        wp_register_style('style_normalize',  get_template_directory_uri().'/css/style_normalize.css',         false, null, 'all');  // css normalizer for all browsers
         wp_register_style('style_bootstrap',  get_template_directory_uri().'/css/bootstrap/bootstrap.min.css', false, null, 'all');  // bootstrap stylesheet
         wp_register_style('style_main',       get_template_directory_uri().'/css/style_main.css',              false, null, 'all');  // your style
         wp_register_style('style_responsive', get_template_directory_uri().'/css/style_responsive.css',        false, null, 'all');  // your responsive style (if needed)
         wp_register_style('style_retina',     get_template_directory_uri().'/css/style_retina.css',            false, null, 'all');  // your retina style (if needed)
 
-        wp_enqueue_style('style_normalize');
         wp_enqueue_style('style_bootstrap');
         wp_enqueue_style('style_main');
         wp_enqueue_style('style_responsive');
