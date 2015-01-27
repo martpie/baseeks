@@ -33,7 +33,7 @@
   * ----- SOME STUFF ------------------
   * ---------------------------------*/
 
-     // Nothing here anymore (for the moment)
+    add_image_size('background', 1920, 1080);
 
 
 
