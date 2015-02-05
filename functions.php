@@ -97,10 +97,10 @@ function remove_menus(){
 
         // Think about using a CDN for Bootstrap
 
-        wp_register_style('style_bootstrap',  get_template_directory_uri().'/css/bootstrap/bootstrap.min.css', false, null, 'all');  // bootstrap stylesheet
-        wp_register_style('style_main',       get_template_directory_uri().'/css/style_main.css',              false, null, 'all');  // your style
-        wp_register_style('style_responsive', get_template_directory_uri().'/css/style_responsive.css',        false, null, 'all');  // your responsive style (if needed)
-        wp_register_style('style_retina',     get_template_directory_uri().'/css/style_retina.css',            false, null, 'all');  // your retina style (if needed)
+        wp_register_style('style_bootstrap',  get_template_directory_uri().'/css/bootstrap/bootstrap.min.css', false, '3.3.2', 'all');  // bootstrap stylesheet
+        wp_register_style('style_main',       get_template_directory_uri().'/css/style_main.css',              false, null,    'all');  // your style
+        wp_register_style('style_responsive', get_template_directory_uri().'/css/style_responsive.css',        false, null,    'all');  // your responsive style (if needed)
+        wp_register_style('style_retina',     get_template_directory_uri().'/css/style_retina.css',            false, null,    'all');  // your retina style (if needed)
 
         wp_enqueue_style('style_bootstrap');
         wp_enqueue_style('style_main');
@@ -122,17 +122,17 @@ function remove_menus(){
         /* using google hosted JS scripts, if you wonder why, check this link: https://stackoverflow.com/questions/2180391/why-should-i-use-googles-cdn-for-jquery */
         if(ENABLE_JQUERY){
             wp_deregister_script('jquery');
-            wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false, '1.11.1', true);
+            wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"), false, '1.11.1', true);
             wp_enqueue_script('jquery');
         }
 
         if(ENABLE_JQUERY_UI){
-            wp_register_script('jquery_ui', ("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"), false, '1.10.4', true);
+            wp_register_script('jquery_ui', ("//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"), false, '1.11.2', true);
             wp_enqueue_script('jquery_ui');
         }
 
         if(ENABLE_JQUERY_MOBILE){
-            wp_register_script('jquery_mobile', ("//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"), false, '1.4.2', true);
+            wp_register_script('jquery_mobile', ("//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"), false, '1.4.3', true);
             wp_enqueue_script('jquery_mobile');
         }
 
@@ -144,11 +144,11 @@ function remove_menus(){
         }
 
         /* Bootstrap */
-        wp_register_script('bootstrap', (get_template_directory_uri().'/js/libs/bootstrap.min.js'), false, '3.1.1', true);
+        wp_register_script('bootstrap', (get_template_directory_uri().'/js/libs/bootstrap.min.js'), false, '3.3.2', true);
         wp_enqueue_script('bootstrap');
 
         /* Your custom JS file */
-        wp_register_script('custom', (get_template_directory_uri().'/js/custom.js'), false, '1.0', true);
+        wp_register_script('custom', (get_template_directory_uri().'/js/custom.js'), false, false, true);
         wp_enqueue_script('custom');
 
         /* You can add you own scripts here */
@@ -164,7 +164,7 @@ function remove_menus(){
 
 function add_fonts() {
 
-    wp_register_style('font_awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+    wp_register_style('font_awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
     wp_enqueue_style( 'font_awesome');
 
 }
