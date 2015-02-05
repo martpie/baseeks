@@ -1,5 +1,10 @@
 #### Pre-Release 2 Changelog
 
+###### 05/02/2015
+
+* Update Bootstrap, jQuery, jQuery UI, jQuery mobile & Font-Awesome
+* Remove get_browser.php
+
 ###### 21/01/2015
 
 * Remove style_normalize (integrated in Bootstrap)
