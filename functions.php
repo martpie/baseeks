@@ -217,7 +217,7 @@ function add_fonts() {
             break;
         case 'none':
             // Disable debugger, no error will be displayed
-            error_reporting(E_ALL);
+            error_reporting(0);
             break;
     }
 
