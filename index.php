@@ -9,25 +9,14 @@
     This is the main template file, usually it is not used, people usually create a template for each page theey have
 */
 
-
-    $ID = get_the_ID();
-
-    // Getting text
-    $post = get_post($ID);
-    $description = $post->post_content;
-    $description = apply_filters( 'the_content', $description );
-
-
     get_header();
 
-?>
 
+    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <!-- You can start here. Well, I guess. -->
+        <!-- You can start here. Well, I guess. -->
 
-    <?php echo $description; ?>
+    endwhile;
 
-
-<?php
 
     get_footer();
