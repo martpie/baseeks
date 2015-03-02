@@ -1,6 +1,4 @@
-![alt text](https://raw.githubusercontent.com/KeitIG/Baseeks/master/screenshot.png "Baseeks Logo")
-
-===
+# Baseeks
 
 #### Description
 
