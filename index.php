@@ -16,7 +16,7 @@
 
         <!-- You can start here. Well, I guess. -->
 
-    <?php endwhile;
+    <?php endwhile; endif;
 
 
     get_footer();
